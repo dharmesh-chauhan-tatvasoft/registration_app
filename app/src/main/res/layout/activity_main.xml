@@ -11,21 +11,21 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        app:cardElevation="6dp"
-        app:cardCornerRadius="0dp">
+        android:layout_marginBottom="@dimen/dimen_4"
+        app:cardElevation="@dimen/dimen_6"
+        app:cardCornerRadius="@dimen/dimen_0">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="@dimen/dimen_60"
             android:gravity="center_vertical"
-            android:layout_marginHorizontal="16dp">
+            android:layout_marginHorizontal="@dimen/dimen_16">
 
             <TextView
                 android:id="@+id/headerText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="User Registration"
-                android:textSize="20sp"
+                android:text="@string/user_registration"
+                android:textSize="@dimen/text_20"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_centerHorizontal="true" />
@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="@dimen/dimen_16"
         android:gravity="center_horizontal"
         android:background="@color/background">
 
@@ -49,9 +49,9 @@
             android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="User Name"
-            android:layout_marginTop="15dp"
-            android:padding="12dp"
+            android:hint="@string/user_name"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:padding="@dimen/dimen_12"
             android:background="@drawable/input_border_background"
             android:inputType="text" />
 
@@ -59,9 +59,9 @@
             android:id="@+id/userEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="User Email"
-            android:layout_marginTop="15dp"
-            android:padding="12dp"
+            android:hint="@string/user_email"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:padding="@dimen/dimen_12"
             android:background="@drawable/input_border_background"
             android:inputType="textEmailAddress" />
 
@@ -69,9 +69,9 @@
             android:id="@+id/userPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="User Password"
-            android:padding="12dp"
-            android:layout_marginTop="15dp"
+            android:hint="@string/user_password"
+            android:padding="@dimen/dimen_12"
+            android:layout_marginTop="@dimen/dimen_15"
             android:background="@drawable/input_border_background"
             android:inputType="textPassword" />
 
@@ -79,43 +79,53 @@
             android:id="@+id/contactNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Contact Number"
-            android:padding="12dp"
+            android:hint="@string/contact_number"
+            android:padding="@dimen/dimen_12"
             android:background="@drawable/input_border_background"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="@dimen/dimen_15"
             android:inputType="phone" />
 
-        <TextView
-            android:id="@+id/selectAge"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="Select Age"
-            android:textSize="18sp"
-            android:paddingHorizontal="12dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <NumberPicker
+            <TextView
+                android:id="@+id/selectAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_age"
+                android:layout_marginRight="@dimen/dimen_12"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="@dimen/text_18" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <NumberPicker
             android:id="@+id/ageNumberPicker"
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/dimen_200"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="12dp"
-            android:layout_marginTop="5dp"
             android:value="18" />
+            </LinearLayout>
 
+        </LinearLayout>
     </LinearLayout>
 
     <Button
         android:id="@+id/nextButton"
-        android:layout_width="300dp"
+        android:layout_width="@dimen/dimen_300"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:text="Next"
+        android:layout_marginTop="@dimen/dimen_14"
+        android:text="@string/next"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:padding="12dp"
+        android:textSize="@dimen/text_20"
+        android:padding="@dimen/dimen_12"
         android:background="@drawable/button_background" />
     </LinearLayout>
 

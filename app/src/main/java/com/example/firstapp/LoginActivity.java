@@ -16,7 +16,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        setInputData();
+    }
 
+    private void setInputData() {
         urlEditText = findViewById(R.id.urlEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         emailEditText = findViewById(R.id.emailEditText);
@@ -34,37 +37,37 @@ public class LoginActivity extends AppCompatActivity {
         String secretKey = secretKeyEditText.getText().toString().trim();
 
         if (url.isEmpty()) {
-            showToast("Url is required");
+            showToast(getString((R.string.url_validation_message)));
             return;
         }
 
         if (password.isEmpty()) {
-            showToast("Password for url is required");
+            showToast(getString((R.string.url_password_validation_message)));
             return;
         }
 
         if (email.isEmpty()) {
-            showToast("Email address is required");
+            showToast(getString((R.string.email_validation_message)));
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            showToast("Invalid email address");
+            showToast(getString((R.string.email_validation_message_invalid)));
             return;
         }
 
         if (credential.isEmpty()) {
-            showToast("Password is required");
+            showToast(getString((R.string.password_validation_message)));
             return;
         }
 
         if (token.isEmpty()) {
-            showToast("Token is required");
+            showToast(getString((R.string.token_validation_message)));
             return;
         }
 
         if (secretKey.isEmpty()) {
-            showToast("Secret key is required");
+            showToast(getString((R.string.secret_key_validation_message)));
             return;
         }
 

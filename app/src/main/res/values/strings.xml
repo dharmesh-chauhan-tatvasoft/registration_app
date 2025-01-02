@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">FirstApp</string>
+    <string name="user_registration">User Registration</string>
+    <string name="user_name">User Name</string>
+    <string name="user_email">User Email</string>
+    <string name="user_password">User Password</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="select_age">Select Age: </string>
+    <string name="next">Next</string>
+    <string name="login">Login</string>
+    <string name="url_hint">http://192.168.15.64</string>
+    <string name="password">Password</string>
+    <string name="url_cred_info_text">By Using Grant Type Password you will not be able to use User Management</string>
+    <string name="email">Email</string>
+    <string name="token">Token</string>
+    <string name="secret_key">Secret Key</string>
+    <string name="authorize">Authorize</string>
+    <string name="home">Home</string>
+    <string name="top">Top</string>
+    <string name="center_view">Center View</string>
+    <string name="bottom">Bottom</string>
+    <string name="l1">L1</string>
+    <string name="l2">L2</string>
+    <string name="r1">R1</string>
+    <string name="r2">R2</string>
+    <string name="username_validation_message">Username is required</string>
+    <string name="email_validation_message">Email address is required</string>
+    <string name="email_validation_message_invalid">Invalid email address</string>
+    <string name="password_validation_message">Password is required</string>
+    <string name="phone_validation_message">Contact number is required</string>
+    <string name="phone_validation_message_invalid">Invalid contact number</string>
+    <string name="age_validation_message">Age must be between 18 and 100</string>
+    <string name="url_validation_message">Url is required</string>
+    <string name="url_password_validation_message">Password for url is required</string>
+    <string name="token_validation_message">Token is required</string>
+    <string name="secret_key_validation_message">Secret key is required</string>
 </resources>

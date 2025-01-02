@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setData();
+    }
+
+    private void setData() {
         agePicker = findViewById(R.id.ageNumberPicker);
         agePicker.setMaxValue(100);
         agePicker.setMinValue(18);
@@ -30,13 +34,13 @@ public class MainActivity extends AppCompatActivity {
         userPasswordEditText = findViewById(R.id.userPassword);
         contactNumberEditText = findViewById(R.id.contactNumber);
         nextButton = findViewById(R.id.nextButton);
-
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 validateUserInfo();
             }
         });
+
     }
 
     private void validateUserInfo() {
@@ -47,41 +51,39 @@ public class MainActivity extends AppCompatActivity {
         int age = agePicker.getValue();
 
         if (userName.isEmpty()) {
-            showToast("Username is required");
+            showToast(getString(R.string.username_validation_message));
             return;
         }
 
         if (userEmail.isEmpty()) {
-            showToast("Email address is required");
+            showToast(getString(R.string.email_validation_message));
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(userEmail).matches()) {
-            showToast("Invalid email address");
+            showToast(getString(R.string.email_validation_message_invalid));
             return;
         }
 
         if (userPassword.isEmpty()) {
-            showToast("Password is required");
+            showToast(getString(R.string.password_validation_message));
             return;
         }
 
         if (contactNumber.isEmpty()) {
-            showToast("Contact number is required");
+            showToast(getString(R.string.phone_validation_message));
             return;
         }
 
         if (!contactNumber.matches("\\d{10}")) {
-            showToast("Invalid contact number");
+            showToast(getString(R.string.phone_validation_message_invalid));
             return;
         }
 
         if (age < 18 || age > 100) {
-            showToast("Age must be between 18 and 100");
+            showToast(getString(R.string.age_validation_message));
             return;
         }
-
-        showToast("Validation Successful");
 
         Intent loginScreen = new Intent(this, LoginActivity.class);
         startActivity(loginScreen);

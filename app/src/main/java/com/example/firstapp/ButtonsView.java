@@ -12,7 +12,10 @@ public class ButtonsView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buttons_view);
+        handleButtonClick();
+    }
 
+    private void handleButtonClick() {
         Button buttonTop = findViewById(R.id.buttonTop);
         Button buttonCenter = findViewById(R.id.buttonCenter);
         Button buttonBottom = findViewById(R.id.buttonBottom);
