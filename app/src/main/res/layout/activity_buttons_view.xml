@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ButtonsView">
+
+        <!-- Header -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="0dp"
+            tools:ignore="MissingConstraints">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginHorizontal="16dp">
+
+                        <TextView
+                            android:id="@+id/headerText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Home"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@color/background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/centerConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="100dp"
+            android:padding="15dp"
+            >
+
+        <!-- Top Button -->
+        <Button
+            android:id="@+id/buttonTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:background="@drawable/button_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Center Button -->
+        <Button
+            android:id="@+id/buttonCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Center View"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:background="@drawable/button_background"
+            app:layout_constraintTop_toBottomOf="@id/buttonTop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buttonBottom" />
+
+        <!-- Bottom Button -->
+        <Button
+            android:id="@+id/buttonBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bottom"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:background="@drawable/button_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Left Top View -->
+        <TextView
+            android:id="@+id/viewL1"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:background="@android:color/holo_blue_light"
+            android:fontFamily="sans-serif-black"
+            android:text="L1"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@id/buttonBottom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonTop" />
+
+        <!-- Right Top View -->
+        <TextView
+            android:id="@+id/viewR1"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:background="@android:color/holo_blue_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="R1"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20sp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/buttonTop"
+            app:layout_constraintBottom_toTopOf="@id/buttonBottom" />
+
+        <!-- Left Bottom View -->
+        <TextView
+            android:id="@+id/viewL2"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:text="L2"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@android:color/holo_red_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonCenter"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonBottom" />
+
+        <!-- Right Bottom View -->
+        <TextView
+            android:id="@+id/viewR2"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:text="R2"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonCenter"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonBottom" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
