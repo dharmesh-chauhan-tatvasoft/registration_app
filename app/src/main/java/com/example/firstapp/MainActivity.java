@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setData();
+        initializeDataInForm();
     }
 
-    private void setData() {
+    private void initializeDataInForm() {
         agePicker = findViewById(R.id.ageNumberPicker);
         agePicker.setMaxValue(100);
         agePicker.setMinValue(18);
